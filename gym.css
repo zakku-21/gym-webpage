@@ -108,7 +108,7 @@ section {
 }
 
 .section-bg {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/girl-fitness.jpg');
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('girl-fitness.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -170,14 +170,14 @@ section p {
 
 /* Services Section - unique background */
 #services.section-bg {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/Dumble.jpg');
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('Dumble.jpg');
     background-size: cover;
     background-position: center;
 }
 
 /* Gallery / Workout Section - unique background */
 #gallery.section-bg {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/804864.jpg');
+    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('804864.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -282,4 +282,5 @@ footer a:hover {
 /* Lists */
 .content-card ul {
     padding-left: 20px;
+
 }
