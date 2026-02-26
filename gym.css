@@ -63,8 +63,8 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    position: relative;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(20,0,0,0.7)), url('images/gym-man-sitting.jpg');
+    background-image:
+      linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(20,0,0,0.7)),url('images/gym-man-sitting.jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -170,17 +170,18 @@ section p {
 
 /* Services Section - unique background */
 #services.section-bg {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/dumble.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url('images/dumble.jpg');
 }
 
 /* Gallery / Workout Section - unique background */
 #gallery.section-bg {
-    background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/804864.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image:
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+      url('images/804864.jpg');
 }
+
 
 /* Gallery Grid */
 .gallery-grid {
@@ -284,4 +285,5 @@ footer a:hover {
     padding-left: 20px;
 
 }
+
 
