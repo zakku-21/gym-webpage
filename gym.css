@@ -171,15 +171,17 @@ section p {
 /* Services Section - unique background */
 #services.section-bg {
     background-image:
-      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-      url('images/dumble.jpg');
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/dumble.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 /* Gallery / Workout Section - unique background */
 #gallery.section-bg {
     background-image:
-      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-      url('images/804864.jpg');
+      linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('images/804864.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 
@@ -285,5 +287,6 @@ footer a:hover {
     padding-left: 20px;
 
 }
+
 
 
