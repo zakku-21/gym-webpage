@@ -8,8 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="gym.css">
-</head>
-<body>
+    
     <header>
         <div class="container">
             <h1>PowerFit Gym</h1>
@@ -73,10 +72,10 @@
                 <h2>Our Workouts</h2>
             </div>
             <div class="gallery-grid">
-                <img src="images\girl-fitness.jpg" alt="Dumbbells">
-                <img src="images\daily-motivation-strength.jpg" alt="Fitness Male">
-                <img src="images\girlyfit.jpg" alt="Fitness Female">
-                <img src="images\gym-man-sitting.jpg" alt="Gym workout image" class="gym-img">
+                <img src="images/girl-fitness.jpg" alt="Dumbbells">
+                <img src="images/daily-motivation-strength.jpg" alt="Fitness Male">
+                <img src="images/girlyfit.jpg" alt="Fitness Female">
+                <img src="images/gym-man-sitting.jpg" alt="Gym workout image" class="gym-img">
             </div>
         </div>
     </section>
@@ -87,16 +86,36 @@
             <div class="contact-grid">
                 <div class="contact-info">
                     <p>Ready to start your fitness journey? Reach out to us!</p>
-                    <p><strong>Email:</strong> info@powerfitgym.com</p>
+                    <p><strong>Email:</strong> okayzk36@gmail.com</p>
                     <p><strong>Phone:</strong> (123) 456-7890</p>
                     <p><strong>Address:</strong> 123 Fitness Street, City, State 12345</p>
                 </div>
                 <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <textarea placeholder="Message" rows="4"></textarea>
-                        <button type="submit">Send Message</button>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Phone Number (optional)">
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service">
+                                <option value="">Select Service Interest</option>
+                                <option value="Personal Training">Personal Training</option>
+                                <option value="Group Classes">Group Classes</option>
+                                <option value="Nutrition Advice">Nutrition Advice</option>
+                                <option value="Membership">Membership</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        <div id="formMessage" class="form-message"></div>
                     </form>
                 </div>
             </div>
@@ -104,17 +123,41 @@
     </section>
 
     <footer>
-    <div class="container">
-        <p>
-            &copy; 2026 PowerFit Gym. All rights reserved. |
-            <a href="privacy.html" target="_blank">Privacy Policy</a> |
-            <a href="terms.html" target="_blank">Terms of Service</a>
-        </p>
-    </div>
-</footer>
+        <div class="container">
+            <p>
+                &copy; 2026 PowerFit Gym. All rights reserved. |
+                <a href="privacy.html" target="_blank">Privacy Policy</a> |
+                <a href="terms.html" target="_blank">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+     <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </head>
+  <body>
+    <script>
+      (function(){
+        emailjs.init("fCFOSoQJEbhT4cTux");
+      })();
+
+      document.getElementById("contactForm")
+        .addEventListener("submit", function(event) {
+          event.preventDefault();
+
+          emailjs.sendForm(
+            "service_n3qi66v",
+            "template_ifba8hk",
+            this
+          ).then(function() {
+            alert("Message Sent Successfully!");
+            document.getElementById("contactForm").reset();
+          }, function(error) {
+            alert("Failed to send. Please try again.");
+          });
+        });
+    </script>
 </body>
 </html>
-
 
 
 
